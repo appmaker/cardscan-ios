@@ -84,14 +84,14 @@ public class OcrMainLoop : MachineLearningLoop {
     public weak var mainLoopDelegate: OcrMainLoopDelegate?
     var errorCorrection = ErrorCorrection()
     var imageQueue: [(CGImage, CGRect)] = []
-    public var imageQueueSize = 2
+    public var imageQueueSize = 1
     var analyzerQueue: [CreditCardOcrImplementation] = []
     let mutexQueue = DispatchQueue(label: "OcrMainLoopMuxtex")
     var inBackground = false
     var machineLearningQueues: [DispatchQueue] = []
     var userDidCancel = false
     
-    public init(analyzers: [AnalyzerType] = [.legacy, .apple]) {
+    public init(analyzers: [AnalyzerType] = [.legacy]) {
         scanStats.model = "legacy+apple"
         machineLearningQueues = []
         for analyzer in analyzers {

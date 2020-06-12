@@ -290,6 +290,8 @@ public protocol TestingImageDataSource: AnyObject {
     override open func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         ScanBaseViewController.isAppearing = false
+        print("DEBUG Legacy: Total Frames for 20s duration: ", self.ocrMainLoop()?.scanStats.scans ?? 0)
+        print("DEBUG Legacy: Frame Rate: ", Double(self.ocrMainLoop()?.scanStats.scans ?? 0) / 20.0)
     }
     
     public func getScanStats() -> ScanStats {

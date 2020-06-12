@@ -19,6 +19,7 @@ class LegacyCreditCardOcr: CreditCardOcrImplementation {
         let startTime = Date()
         let number = ocr.perform(croppedCardImage: image, squareCardImage: squareImage, fullCardImage: fullImage)
         let duration = -startTime.timeIntervalSinceNow
+        print("DEBUG: Inference time for Legacy Ocr: ", duration)
         let numberBoxes = ocr.scanStats.lastFlatBoxes
         let expiryBoxes = ocr.scanStats.expiryBoxes
         
