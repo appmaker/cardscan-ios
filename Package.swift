@@ -16,7 +16,8 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "CardScan"),
-            path: "CardScan",
+            name: "CardScan",
+            path: "CardScan"),
+            
     ]
 )
