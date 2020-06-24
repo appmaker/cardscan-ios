@@ -3,7 +3,6 @@ import PackageDescription
 
 let package = Package(
     name: "CardScan",
-    path: "CardScan",
     platforms: [
         .iOS(.v11),
     ],
@@ -18,6 +17,6 @@ let package = Package(
     targets: [
         .target(
             name: "CardScan"),
-  
+            path: "CardScan",
     ]
 )
