@@ -3,6 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "CardScan",
+    path: "CardScan",
     platforms: [
         .iOS(.v11),
     ],
